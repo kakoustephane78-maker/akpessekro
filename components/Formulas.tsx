@@ -20,15 +20,13 @@ export default function Formulas({ wheelSpun, wheelResult }: FormulasProps) {
     }).format(amount);
   };
 
-  const getDiscountedAmount = (amount: number) => {
-    if (!wheelSpun || !wheelResult?.discount) return amount;
-    return Math.floor(amount * (1 - wheelResult.discount / 100));
+  // Prix minimum garanti (ne baisse jamais peu importe la roue)
+  const getMinimumPrice = (promotionalAmount: number) => {
+    return promotionalAmount;
   };
 
-  const getTotalWithFees = (amount: number) => {
-    if (!wheelSpun || !wheelResult?.discount) return amount;
-    const discounted = getDiscountedAmount(amount);
-    return discounted + credibleFees.total;
+  const getTotalWithFees = (promotionalAmount: number) => {
+    return promotionalAmount + credibleFees.total;
   };
 
   return (
@@ -88,13 +86,13 @@ export default function Formulas({ wheelSpun, wheelResult }: FormulasProps) {
               ) : (
                 /* APRÈS ROUE : Affichage détaillé avec frais */
                 <div className="space-y-4 mb-8">
-                  {/* Prix après réduction */}
+                  {/* Prix minimum garanti */}
                   <div className="bg-orange-50 border-l-4 border-orange-600 p-5 rounded-sm">
                     <p className="text-xs text-orange-700 uppercase tracking-wider font-semibold mb-2">
-                      Prix après réduction ({wheelResult?.discount}%)
+                      Prix de participation
                     </p>
                     <p className="text-3xl font-bold text-orange-600">
-                      {formatCFA(getDiscountedAmount(formula.promotionalAmount))}
+                      {formatCFA(getMinimumPrice(formula.promotionalAmount))}
                     </p>
                   </div>
 
@@ -124,7 +122,7 @@ export default function Formulas({ wheelSpun, wheelResult }: FormulasProps) {
 
                     <div className="mb-4 text-center">
                       <div className="flex justify-center items-center gap-2 mb-2">
-                        <span className="text-xl font-bold text-gray-900">{formatCFA(getDiscountedAmount(formula.promotionalAmount))}</span>
+                        <span className="text-xl font-bold text-gray-900">{formatCFA(getMinimumPrice(formula.promotionalAmount))}</span>
                         <span className="text-gray-700">+</span>
                         <span className="text-xl font-bold text-orange-600">{formatCFA(credibleFees.total)}</span>
                       </div>
@@ -135,7 +133,7 @@ export default function Formulas({ wheelSpun, wheelResult }: FormulasProps) {
                     </div>
 
                     <p className="text-xs text-green-700 font-semibold">
-                      ✓ Avantage appliqué : -{wheelResult?.discount}% sur le prix
+                      ✓ Avantage roue : {wheelResult?.label}
                     </p>
                   </div>
 
