@@ -6,6 +6,7 @@ export interface Formula {
   initialDeposit: number | number[];
   monthlyPayment: number;
   description: string;
+  numberOfLots?: number;
 }
 
 export interface WheelResult {

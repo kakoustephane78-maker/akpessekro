@@ -2,22 +2,24 @@ import { Formula, WheelResult } from './types';
 
 export const formulas: Formula[] = [
   {
-    id: 'individual',
-    name: 'Formule Individuelle',
-    referenceAmount: 2_500_000,
+    id: '1-lot',
+    name: '1 Lot',
+    referenceAmount: 2_000_000,
     promotionalAmount: 2_000_000,
     initialDeposit: 1_000_000,
-    monthlyPayment: 100_000,
-    description: 'Participation à titre individuel à partir de 2M FCFA',
+    monthlyPayment: 250_000,
+    description: 'Participation pour 1 lot (2 000 000 FCFA)',
+    numberOfLots: 1,
   },
   {
-    id: 'group',
-    name: 'Formule Groupée',
+    id: '3-lots',
+    name: '3 Lots',
     referenceAmount: 6_000_000,
-    promotionalAmount: 5_000_000,
-    initialDeposit: [2_000_000, 3_000_000],
-    monthlyPayment: 200_000,
-    description: 'Participation groupée pour 3 lots à partir de 5M FCFA',
+    promotionalAmount: 6_000_000,
+    initialDeposit: [2_000_000, 2_000_000],
+    monthlyPayment: 500_000,
+    description: 'Participation pour 3 lots (6 000 000 FCFA)',
+    numberOfLots: 3,
   },
 ];
 
@@ -66,13 +68,21 @@ export const investmentHorizons = [
   'Sans horizon défini',
 ];
 
-// Projet détails
+// Projet détails - Akpessekro Investment Opportunity
 export const projectDetails = {
   location: 'Akpessekro, Yamoussoukro',
   numberOfLots: 25,
   totalArea: 69, // hectares
-  infrastructure: ['Électricité', 'Zone habitée', 'Pistes d\'accès'],
-  features: ['Terrain en zone développement', 'Proximité services urbains', 'Pistes existantes'],
+  pricePerLot: 2_000_000, // FCFA
+  indicativeSizePerLot: '300-400 m²',
+  futureValueEstimate: 15_000_000, // FCFA par lot (sous réserve)
+  infrastructure: ['Électricité disponible', 'Zone habitée', 'Pistes d\'accès existantes'],
+  features: ['Terrain en zone développement', 'Proximité services urbains', 'Accès routier établi'],
+  foncierStatus: {
+    currentDocument: 'Attestation villageoise signée par le chef du village',
+    acdStatus: 'Non obtenu à ce jour',
+    objective: 'Mobiliser des fonds pour financer le processus de titrage foncier',
+  },
 };
 
 // Frais crédibles (appliqués après réduction roue)
