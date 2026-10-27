@@ -1,7 +1,7 @@
 import { Prospect } from './types';
 
-const RESEND_API_KEY = 're_Dav7Wd92_PXXyqaMqTsLGcnyraukjw1RP';
-const RECIPIENT_EMAIL = 'kakou.stephane78@gmail.com';
+const RESEND_API_KEY = process.env.RESEND_API_KEY || '';
+const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || 'kakou.stephane78@gmail.com';
 
 export async function sendProspectNotification(prospect: Prospect) {
   try {
