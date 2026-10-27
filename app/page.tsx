@@ -1,49 +1,56 @@
 'use client';
 
-import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProjectDetails from '@/components/ProjectDetails';
-import Formulas from '@/components/Formulas';
-import PromotionalWheel from '@/components/PromotionalWheel';
+import ParticipationInterest from '@/components/ParticipationInterest';
+import ComprehendNumbers from '@/components/ComprehendNumbers';
+import FoncierTransparency from '@/components/FoncierTransparency';
+import ConditionsRisks from '@/components/ConditionsRisks';
 import ProspectForm from '@/components/ProspectForm';
-import { WheelResult } from '@/lib/types';
 
 export default function Home() {
-  const [wheelSpun, setWheelSpun] = useState(false);
-  const [wheelResult, setWheelResult] = useState<WheelResult | null>(null);
-
-  const handleWheelSpun = (result: WheelResult) => {
-    setWheelResult(result);
-    setWheelSpun(true);
-  };
-
   return (
     <>
       <Navbar />
       <main>
+        {/* 1. HERO - Investment Opportunity */}
         <Hero />
-      <ProjectDetails />
-      <Formulas wheelSpun={wheelSpun} wheelResult={wheelResult} />
-      <PromotionalWheel onWheelSpun={handleWheelSpun} disabled={wheelSpun} />
 
-      {/* Section Formulaire */}
-      <section id="form" className="py-20 md:py-32 bg-white">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
-              Demander plus d&apos;<span className="font-semibold text-green-700">informations</span>
-            </h2>
-            <p className="text-gray-600 text-lg">
-              Laissez vos coordonnées et notre équipe vous recontactera pour vous présenter tous les détails et répondre à vos questions.
-            </p>
-          </div>
+        {/* 2. PROJECT DETAILS */}
+        <ProjectDetails />
 
-          <div className="bg-gray-50 rounded-sm p-8">
-            <ProspectForm wheelSpun={wheelSpun} wheelResult={wheelResult} />
+        {/* 3. WHY PARTICIPATE EARLY */}
+        <section id="participation">
+          <ParticipationInterest />
+        </section>
+
+        {/* 4. UNDERSTAND THE NUMBERS */}
+        <ComprehendNumbers />
+
+        {/* 5. LAND STATUS TRANSPARENCY */}
+        <FoncierTransparency />
+
+        {/* 6. CONDITIONS & RISKS */}
+        <ConditionsRisks />
+
+        {/* 7. INVESTMENT CANDIDATE FORM */}
+        <section id="form" className="py-20 md:py-32 bg-gradient-to-br from-orange-50 to-white">
+          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
+                Formulaire de <span className="font-semibold text-orange-600">candidature investisseur</span>
+              </h2>
+              <p className="text-gray-600 text-lg">
+                Exprimez votre intérêt et demandez les conditions de participation. Notre équipe vous contactera avec tous les détails.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-lg shadow-lg p-8">
+              <ProspectForm wheelSpun={true} wheelResult={null} />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12 md:py-16">
@@ -61,9 +68,9 @@ export default function Home() {
             <div>
               <h4 className="font-semibold mb-4">Navigation</h4>
               <ul className="text-gray-400 text-sm space-y-2">
-                <li><a href="#formules" className="hover:text-orange-500 transition">Formules</a></li>
                 <li><a href="#details" className="hover:text-orange-500 transition">Le Projet</a></li>
-                <li><a href="#roue" className="hover:text-orange-500 transition">Roue Promotionnelle</a></li>
+                <li><a href="#participation" className="hover:text-orange-500 transition">Pourquoi participer</a></li>
+                <li><a href="#form" className="hover:text-orange-500 transition">Candidature</a></li>
               </ul>
             </div>
             <div>

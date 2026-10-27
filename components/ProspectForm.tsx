@@ -112,16 +112,6 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
     );
   }
 
-  if (!wheelSpun) {
-    return (
-      <div className="bg-orange-50 border-l-4 border-orange-600 rounded-sm p-8 text-center">
-        <p className="text-orange-900 font-semibold mb-2">🎡 Étape obligatoire</p>
-        <p className="text-orange-800">
-          Veuillez d'abord tourner la roue promotionnelle pour découvrir votre avantage, puis vous pourrez remplir ce formulaire.
-        </p>
-      </div>
-    );
-  }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">

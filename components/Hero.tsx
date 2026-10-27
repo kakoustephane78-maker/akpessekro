@@ -15,38 +15,42 @@ export default function Hero() {
             </div>
 
             {/* Titre principal */}
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-light mb-6 md:mb-8 leading-tight text-gray-900">
-              Et si vous preniez position sur le <span className="font-semibold text-orange-600">foncier</span> dès aujourd&apos;hui ?
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-light mb-6 md:mb-8 leading-tight text-gray-900">
+              <span className="font-semibold text-orange-600">AKPESSEKRO</span> — Une opportunité <span className="font-semibold">foncière à un stade stratégique</span>
             </h1>
 
             {/* Sous-titre */}
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-              SK Immobilier vous présente une opportunité de participation foncière portant sur un projet de <strong>25 lots</strong> à <strong>Akpessekro, Yamoussoukro</strong>.
+            <p className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
+              Participez à une opération de mobilisation de fonds destinée à financer le processus de titrage d&apos;une parcelle de <strong>69 hectares</strong> à Akpessekro, dans la région de Yamoussoukro.
             </p>
 
-            {/* Features rapides */}
-            <div className="space-y-3 mb-10">
-              <div className="flex items-start gap-3">
-                <span className="text-orange-600 font-bold">✓</span>
-                <p className="text-gray-700">Zone habitée • Électricité • Pistes d'accès</p>
+            {/* Key Info Grid */}
+            <div className="grid grid-cols-2 gap-4 mb-10 bg-orange-50 p-6 rounded-lg">
+              <div>
+                <p className="text-xs text-orange-700 uppercase tracking-wider font-semibold">Superficie</p>
+                <p className="text-2xl font-bold text-orange-600">69 hectares</p>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="text-orange-600 font-bold">✓</span>
-                <p className="text-gray-700">Formules adaptées à différents budgets</p>
+              <div>
+                <p className="text-xs text-orange-700 uppercase tracking-wider font-semibold">Nombre de lots</p>
+                <p className="text-2xl font-bold text-orange-600">25 lots</p>
               </div>
-              <div className="flex items-start gap-3">
-                <span className="text-orange-600 font-bold">✓</span>
-                <p className="text-gray-700">Paiement échelonné possible</p>
+              <div>
+                <p className="text-xs text-orange-700 uppercase tracking-wider font-semibold">Par lot</p>
+                <p className="text-2xl font-bold text-orange-600">300-400 m²</p>
+              </div>
+              <div>
+                <p className="text-xs text-orange-700 uppercase tracking-wider font-semibold">Prix envisagé</p>
+                <p className="text-2xl font-bold text-orange-600">2M FCFA</p>
               </div>
             </div>
 
             {/* CTA */}
             <div className="flex flex-col gap-3">
-              <a href="#formules" className="px-6 py-4 bg-orange-600 text-white font-semibold rounded-sm hover:bg-orange-700 transition text-center text-base sm:text-lg">
-                Découvrir les formules
+              <a href="#details" className="px-6 py-4 bg-orange-600 text-white font-semibold rounded-sm hover:bg-orange-700 transition text-center text-base sm:text-lg">
+                Découvrir le projet
               </a>
-              <a href="#details" className="px-6 py-4 border-2 border-green-700 text-green-700 font-semibold rounded-sm hover:bg-green-50 transition text-center text-base sm:text-lg">
-                Comprendre le projet
+              <a href="#participation" className="px-6 py-4 border-2 border-green-700 text-green-700 font-semibold rounded-sm hover:bg-green-50 transition text-center text-base sm:text-lg">
+                Étudier les conditions
               </a>
             </div>
           </div>
