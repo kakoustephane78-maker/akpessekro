@@ -124,11 +124,11 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8">
+    <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
       {/* Contact Info */}
       <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Vos informations</h3>
-        <div className="grid md:grid-cols-2 gap-4">
+        <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-4">Vos informations</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
           <input
             type="text"
             name="firstName"
@@ -136,7 +136,7 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
             value={formData.firstName}
             onChange={handleChange}
             required
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           />
           <input
             type="text"
@@ -145,7 +145,7 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
             value={formData.lastName}
             onChange={handleChange}
             required
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           />
           <input
             type="tel"
@@ -154,7 +154,7 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
             value={formData.phone}
             onChange={handleChange}
             required
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           />
           <input
             type="email"
@@ -162,20 +162,20 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
             placeholder="Email (optionnel)"
             value={formData.email}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           />
         </div>
       </div>
 
       {/* Formula & Investment */}
       <div>
-        <h3 className="text-lg font-semibold text-gray-900 mb-4">Intérêt d&apos;investissement</h3>
-        <div className="grid md:grid-cols-2 gap-4">
+        <h3 className="text-lg md:text-xl font-semibold text-gray-900 mb-4">Intérêt d&apos;investissement</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
           <select
             name="formula"
             value={formData.formula}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           >
             <option value="">Choisir une formule...</option>
             {formulas.map((f) => (
@@ -191,7 +191,7 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
             min="1"
             value={formData.numberOfLots}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           />
           <input
             type="text"
@@ -199,7 +199,7 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
             placeholder="Budget disponible (optionnel)"
             value={formData.budget}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           />
           <input
             type="text"
@@ -207,7 +207,7 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
             placeholder="Apport initial envisagé (optionnel)"
             value={formData.initialDeposit}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           />
         </div>
       </div>
@@ -220,7 +220,7 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
             name="paymentMethod"
             value={formData.paymentMethod}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           >
             <option value="">Mode de paiement...</option>
             {paymentMethods.map((method) => (
@@ -233,7 +233,7 @@ export default function ProspectForm({ wheelSpun, wheelResult, wheelResultValue 
             name="investmentHorizon"
             value={formData.investmentHorizon}
             onChange={handleChange}
-            className="px-4 py-3 border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
+            className="px-4 py-3 md:py-3 text-base border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-orange-600"
           >
             <option value="">Horizon d&apos;investissement...</option>
             {investmentHorizons.map((horizon) => (

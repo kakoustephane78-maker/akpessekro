@@ -6,8 +6,8 @@ export default function Hero() {
       {/* Header premium */}
       <div className="bg-gradient-to-r from-green-700 via-white to-orange-600 h-1"></div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
             {/* Badge */}
             <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-green-50 rounded-full border border-green-200">
@@ -15,7 +15,7 @@ export default function Hero() {
             </div>
 
             {/* Titre principal */}
-            <h1 className="text-5xl md:text-6xl font-light mb-8 leading-tight text-gray-900">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-light mb-6 md:mb-8 leading-tight text-gray-900">
               Et si vous preniez position sur le <span className="font-semibold text-orange-600">foncier</span> dès aujourd&apos;hui ?
             </h1>
 
@@ -41,11 +41,11 @@ export default function Hero() {
             </div>
 
             {/* CTA */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#formules" className="px-8 py-3 bg-orange-600 text-white font-semibold rounded-sm hover:bg-orange-700 transition text-center">
+            <div className="flex flex-col gap-3">
+              <a href="#formules" className="px-6 py-4 bg-orange-600 text-white font-semibold rounded-sm hover:bg-orange-700 transition text-center text-base sm:text-lg">
                 Découvrir les formules
               </a>
-              <a href="#details" className="px-8 py-3 border-2 border-green-700 text-green-700 font-semibold rounded-sm hover:bg-green-50 transition text-center">
+              <a href="#details" className="px-6 py-4 border-2 border-green-700 text-green-700 font-semibold rounded-sm hover:bg-green-50 transition text-center text-base sm:text-lg">
                 Comprendre le projet
               </a>
             </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import ProjectDetails from '@/components/ProjectDetails';
 import Formulas from '@/components/Formulas';
@@ -18,14 +19,16 @@ export default function Home() {
   };
 
   return (
-    <main>
-      <Hero />
+    <>
+      <Navbar />
+      <main>
+        <Hero />
       <ProjectDetails />
       <Formulas wheelSpun={wheelSpun} wheelResult={wheelResult} />
       <PromotionalWheel onWheelSpun={handleWheelSpun} disabled={wheelSpun} />
 
       {/* Section Formulaire */}
-      <section className="py-20 md:py-32 bg-white">
+      <section id="form" className="py-20 md:py-32 bg-white">
         <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4">
@@ -83,6 +86,7 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </main>
+      </main>
+    </>
   );
 }
